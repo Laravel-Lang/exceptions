@@ -15,7 +15,7 @@ final class UnknownLocaleException extends RuntimeException
         parent::__construct('Unknown locale: ' . $this->stringify($locale));
     }
 
-    protected function stringify(LocaleData|Locale|string $locale): string
+    protected function stringify(Locale|LocaleData|string $locale): string
     {
         return match (true) {
             $locale instanceof LocaleData => $locale->code,
