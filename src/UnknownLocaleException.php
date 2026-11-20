@@ -8,7 +8,7 @@ use LaravelLang\LocaleList\Locale;
 use LaravelLang\NativeLocaleNames\LocaleData;
 use RuntimeException;
 
-class UnknownLocaleException extends RuntimeException
+final class UnknownLocaleException extends RuntimeException
 {
     public function __construct(Locale|LocaleData|string $locale)
     {

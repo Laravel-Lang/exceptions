@@ -6,7 +6,7 @@ namespace LaravelLang\Exceptions;
 
 use RuntimeException;
 
-class UnknownModelPathException extends RuntimeException
+final class UnknownModelPathException extends RuntimeException
 {
     public function __construct(string $model)
     {
