@@ -5,26 +5,21 @@ declare(strict_types=1);
 namespace LaravelLang\Exceptions;
 
 use Exception;
-use Illuminate\Database\Eloquent\Model;
 
 use function implode;
 use function sprintf;
 
 final class AttributeIsNotTranslatableException extends Exception
 {
-    public function __construct(string $column, Model $model)
+    /** @param array<array-key, string> $available */
+    public function __construct(string $column, array $available)
     {
         parent::__construct(
             sprintf(
                 'Cannot translate attribute `%s` as it\'s not on of the translatable attributes: `%s`.',
                 $column,
-                $this->available($model)
+                implode(', ', $available)
             )
         );
-    }
-
-    protected function available(Model $model): string
-    {
-        return implode(', ', $model->translatable());
     }
 }
