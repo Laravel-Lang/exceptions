@@ -1,0 +1,39 @@
+{
+    "name": "laravel-lang/exceptions",
+    "description": "A set of exception classes for Laravel-Lang",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "laravel-lang",
+        "i18n",
+        "localization",
+        "translations"
+    ],
+    "authors": [
+        {
+            "name": "Andrey Helldar",
+            "email": "helldar@dragon-code.pro"
+        },
+        {
+            "name": "Laravel-Lang Team",
+            "homepage": "https://laravel-lang.com"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/Laravel-Lang/mona"
+    },
+    "require": {
+        "php": "^8.3"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "LaravelLang\\Exceptions\\": "src/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

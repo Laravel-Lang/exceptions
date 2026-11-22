@@ -11,6 +11,6 @@ final class InvalidTranslationLoaderException extends TypeError
 {
     public function __construct()
     {
-        parent::__construct('The translation.loader binding must implement ' . Loader::class);
+        parent::__construct('The "translation.loader" binding must implement ' . Loader::class);
     }
 }
