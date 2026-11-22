@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace LaravelLang\Exceptions;
 
 use LaravelLang\LocaleList\Locale;
+use LaravelLang\LocaleNames\LocaleData;
 use LaravelLang\Locales\Facades\Locales;
-use LaravelLang\NativeLocaleNames\LocaleData;
 use RuntimeException;
 
 final class UnknownLocaleException extends RuntimeException
